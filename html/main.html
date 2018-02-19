@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Charm</title>
+    <link rel="stylesheet" type="text/css" href="./../css/main.css">
+  </head>
+  <body>
+    <div id="tabs"></div>
+    <ul id="control">
+        <li id="dest">
+            <input name="url" id="dest-input" type="text" maxlength="1024">
+        </li>
+        <li id="go-stop">
+            <button id="gostop" onclick="go()" type="submit">&#9002;&#xFE0E;</button>
+        </li>
+        <li id="forward-back">
+            <button id="back" onclick="back()" type="button">&#9664;&#xFE0E;</button>
+            <button id="forward" onclick="forward()" type="button">&#9654;&#xFE0E;</button>
+        </li>
+        <li id="refresh">
+            <button id="refresh-button" onclick="refresh()" type="button">&#10227;&#xFE0E;</button>
+        </li>
+        <li id="home">
+            <button id="home-button" onclick="home()" type="button">&#127968;&#xFE0E;</button>
+            <button id="sethome-button" onclick="sethome()" type="button">&#9733;&#xFE0E;</button>
+        </li>
+        <li id="tabcontrol">
+            <button id="addTab-button" onclick="createNextTab()" type="button">&#65291;&#xFE0E;</button>
+            <button id="delTab-button" onclick="deleteActive()" type="button">&#8211;&#xFE0E;</button>
+        </li>
+        <li id="menu" class="right">
+            <button onclick="myFunction2()" class="dropbtn">&#10064;&#xFE0E;</button>
+            <div id="dropup2" class="dropdown-content2" style="width: 10.5vw; right:0;"></div>
+        </li>
+        <li id="menu" class="right">
+            <button onclick="myFunction()" class="dropbtn">&#9776;&#xFE0E;</button>
+            <div id="dropup" class="dropdown-content">
+                <button id="devtools-button" onclick="devtools()" type="button">&#128736;&#xFE0E;</button>
+            </div>
+        </li>
+        
+        
+    </ul>
+    <script src="./../js/tlds.js"></script>
+    <script src="./../js/tabhandle.js"></script>
+    <script src="./../js/webcontrols.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+{
+  "name": "qwark_charm",
+  "version": "1.0.0",
+  "description": "The Charm Browser, created for Qwark, open-source for everyone!",
+  "main": "./js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": {
+    "name": "Jade Krabbe",
+    "url": "https://iearthia.xyz",
+    "email": "jade.krabbe@gmail.com"
+  },
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.1.1",
+    "electron-prebuilt-compile": "1.7.9",
+    "electron-wix-msi": "^1.3.0"
+  },
+  "dependencies": {
+    "electron-compile": "^6.4.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-tabs": "^0.9.0"
+  },
+  "homepage": "https://iearthia.xyz",
+  "build": {
+    "appId": "xyz.iearthia.charm",
+    "productName": "Charm",
+    "directories": {
+      "buildResources": ".",
+      "output": "./built"
+    }
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "zip"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm",
+        "icon": "./icon.ico"
+      },
+      "electronWinstallerConfig": {
+        "name": "Charm"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "Charm"
+      },
+	  "electronWixMSIConfig": {
+		"exe": "Charm.exe",
+		"version":"1.0b",
+		"manufacturer":"Iearthia",
+		"description":"Charm Web Browser",
+		"name":"Charm"
+	  }
+    }
+  }
+}
